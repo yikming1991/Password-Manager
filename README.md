@@ -1,5 +1,5 @@
 # Password-Manager
-- Stores login information for specified websites as dictionary of dictionaries in a json file  
+- Stores login information for specified websites as a nested dictionary in a json file  
 - User is able to generate a random password if required  
 - Interface is built using Tkinter  
 - Uses exception handling to check and guide user behaviour  
