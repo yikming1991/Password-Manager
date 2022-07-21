@@ -28,8 +28,8 @@ def save_info():
         website_to_save: {
             "email": user_to_save,
             "password": password_to_save,
+            }
         }
-    }
 
     if website_to_save == "" or user_to_save == "" or password_to_save == "":
         messagebox.showinfo(title="Empty fields", message="Do not leave any fields empty!")
@@ -51,6 +51,7 @@ def save_info():
         website_input.delete(0, END)
         password_input.delete(0, END)
         # email_username_input.delete(0, END)
+
 # ---------------------------- SEARCH ------------------------------- #
 def search():
     website_to_search = website_input.get().upper()
@@ -65,6 +66,7 @@ def search():
         try:
             login_info = data[website_to_search]
         except KeyError:
+            password_input.delete(0, END)
             messagebox.showinfo(title="Website not found",
                                 message="Details for that website does not exist.")
         else:
@@ -79,6 +81,14 @@ def search():
             password_input.insert(0, f"{login_info['password']}")
             messagebox.showinfo(title=f"Website - {website_to_search}",
                                 message="Info found, see entry fields")
+
+
+# ---------------------------- CLEAR ------------------------------- #
+def clear():
+    website_input.delete(0, END)
+    password_input.delete(0, END)
+    email_username_input.delete(0, END)
+
 # ---------------------------- UI SETUP ------------------------------- #
 window = Tk()
 window.title("Password Manager")
@@ -116,7 +126,8 @@ generate_password.grid(column=2, row=3, sticky="EW")
 search_button = Button(text="Search", command=search)
 search_button.grid(column=2, row=1, columnspan=1, sticky="EW")
 
-
+clear_button = Button(text="Clear", width=45, command=clear)
+clear_button.grid(column=1, row=5, columnspan=2)
 
 
 window.mainloop()
