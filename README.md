@@ -1,4 +1,4 @@
 # Password-Manager
-![generatepassword](https://user-images.githubusercontent.com/107847007/180216256-aa37b5e3-1489-4914-82c3-e7ae1d13ae68.png)
-![cantfind](https://user-images.githubusercontent.com/107847007/180216265-14347426-3ca4-4163-b881-337686b45e0a.png)
-![infofound](https://user-images.githubusercontent.com/107847007/180216269-7b8e31cd-9f39-414e-b5f5-d7ab56b2924c.png)
+![pwmanager](https://user-images.githubusercontent.com/107847007/180216643-fd311b35-5268-4dec-a3fe-a556115434b2.png)
+![infofound](https://user-images.githubusercontent.com/107847007/180216663-bc212643-80e2-47c4-bfbe-c6b9dca941f3.png)
+![cantfind](https://user-images.githubusercontent.com/107847007/180216903-ffaf2fbb-7fe9-415d-9110-9cd2d0e8c4da.png)
