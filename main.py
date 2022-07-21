@@ -77,6 +77,7 @@ def search():
 
             # ------- Populate email and password fields for easier copying ------- #
             email_username_input.delete(0,END)
+            password_input.delete(0, END)
             email_username_input.insert(0, f"{login_info['email']}")
             password_input.insert(0, f"{login_info['password']}")
             messagebox.showinfo(title=f"Website - {website_to_search}",
