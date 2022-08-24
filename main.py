@@ -1,8 +1,6 @@
 from tkinter import *
 from tkinter import messagebox
-import random
-import pyperclip
-import json
+import random, pyperclip, json, pycryptodome
 # ---------------------------- PASSWORD GENERATOR ------------------------------- #
 def generate_pw():
     password_input.delete(0, END)
@@ -19,6 +17,18 @@ def generate_pw():
     password = "".join(password_list)
     password_input.insert(0, f"{password}")
     pyperclip.copy(password)
+
+
+# ---------------------------- Encrypt/Decrypt ------------------------------- #
+block_size = 16
+def pad(plain_text):
+        remainder = len(plain_text) % block_size
+        padding_needed = block_size - remainder
+        return plain_text+padding_needed
+
+def unpad(padded_text):
+    return padded_text.rstrip()
+
 # ---------------------------- SAVE PASSWORD ------------------------------- #
 def save_info():
     website_to_save = website_input.get().upper()
